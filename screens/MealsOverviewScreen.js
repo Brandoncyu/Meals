@@ -1,4 +1,4 @@
-import {useLayoutEffect} from 'react'
+import { useLayoutEffect } from 'react'
 
 import { View, FlatList, StyleSheet } from 'react-native';
 import MealItem
@@ -23,6 +23,7 @@ function MealsOverviewScreen({ route, navigation }) {
     function renderMealItem(itemData) {
         const item = itemData.item
         const mealItemProps = {
+            id: item.id,
             title: item.title,
             imageUrl: item.imageUrl,
             duration: item.duration,
